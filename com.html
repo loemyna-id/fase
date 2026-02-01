@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fajar Setiawan - Core Competencies</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --navy: #ffffff;
+      --gold: #4fd1c5;
+      --bg: #0b1419;
+      --gray: #6b7280;
+      --font-main: 'Poppins', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+        body {
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      height: 240px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-title {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: var(--bg);
+      padding: 12px 20px;
+    }
+
+    .hero-title h1 {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .hero-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--gold);
+      margin-top: 6px;
+    }
+
+
+
+/* ================= DESKTOP ================= */
+@media (min-width: 768px) {
+  .journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .journal-card img {
+    height: 180px;
+  }
+}
+
+        .hero {            
+         position: relative;
+            height: 60vh;
+            background: url('2120200.jpg') center/cover no-repeat;
+        }
+
+
+        .hero-box {
+            position: absolute;
+            bottom: 40px;
+            left: 5%;
+            right: 0;
+            background: var(--bg);
+            color: white;
+            padding: 12px 20px;
+            max-width: 600px;
+            box-shadow: 10px 10px 0px var(--gold);
+        }
+
+        .hero-box h1 {font-size: 2.5rem; margin-bottom: 15px;
+        }
+        
+        @media (min-width: 1024px) {
+    .hero-box {
+        left: 5%;
+        right: auto;
+    }
+}
+
+body {
+  background: #0b1419;
+}
+
+.explore {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #0b1419;
+  color: #000000;
+}
+
+.explore h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  height: 120px;
+  border-radius: 12px;
+  padding: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 70%;
+}
+
+/* IMAGE */
+.card img {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  bottom: -8px;
+  right: -8px;
+  transform: rotate(25deg);
+  border-radius: 8px;
+}
+
+/* COLORS */
+.purple { background: #4fd1c5; }
+.green-dark { background: #4fd1c5; }
+.green { background: #4fd1c5; }
+.blue { background: #4fd1c5; }
+.maroon { background: #4fd1c5; }
+.red { background: #4fd1c5; }
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .card {
+    height: 150px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .card img {
+    width: 110px;
+    height: 110px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+    <header>
+        <div class="logo">
+            FAJAR SETIAWAN
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="com.html">Competencies</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="header-btn">
+         <a href="cv-fajar-setiawan.pdf">
+            <button class="btn btn-filled">Download CV</button>
+            </a>
+            <a href="https://wa.me/6285602283775" 
+              target="_blank" 
+              class="btn btn-outline">Contact Me</a>
+        </div>
+    </header>
+
+<!-- HERO -->
+    <section class="hero">
+        <div class="hero-box">
+            <h1>Core Competencies</h1>
+        </div>
+    </section>
+    
+      <section class="explore">
+    <h1>Jelajahi semua</h1>
+
+    <div class="grid">
+         <a href="fin.html" class="service-link">
+      <div class="card purple">
+        <h2>Financial<br>Reporting</h2>
+        <img src="accounting.png" alt="Pop Mix">
+      </div>
+        </a>
+
+      <div class="card green-dark">
+         <a href="tax.html" class="service-link">
+        <h2>Tax Administration<br>(PPh & VAT)</h2>
+        <img src="tax.png" alt="Rilis">
+        </a>
+      </div>
+
+      <div class="card green">
+         <a href="fin.html" class="service-link">
+        <h2>Audit Documentation</h2>
+        <img src="audit.png" alt="New Music">
+        </a>
+      </div>
+
+      <div class="card blue">
+         <a href="ex.html" class="service-link">
+        <h2>Microsoft Excel (Pivot, Lookup, If)</h2>
+        <img src="excel.png" alt="Pop">
+        </a>
+      </div>
+
+      <div class="card maroon">
+         <a href="sos.html" class="service-link">
+        <h2>Social Media Management</h2>
+        <img src="social-media.png" alt="Indie">
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Actively Seeking Junior Accounting or Finance Roles</h2>
+            <a href="https://wa.me/6285602283775" 
+              target="_blank" 
+              class="btn btn-filled">Contact Me</a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col info">
+                 <p1>Regard,</p1>
+                    <div class="footer-logo">Fajar Setiawan</div>
+                    <p>Accounting graduate with interest in financial reporting, bookkeeping, taxation, and administrative finance support roles.</p>
+                    <p>I am ready to contribute, learn, and grow in a professional finance environment.</p>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Link</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="com.html">Competencies</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/phazarrs?igsh=OXdnYjh0NHR2dzN2">Instagram</a></li>
+                        <li><a href="https://x.com/_xetya1">X</a></li>
+                        <li><a href="https://www.linkedin.com/in/fajar-setiawan-97074b29a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Based</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ds. Kalapagunung Kec. Kramatmulya Kab. Kuningan Jawa Barat 45553</p>
+                    <p><i class="fas fa-envelope"></i> fajarsetiawan.s.ak@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

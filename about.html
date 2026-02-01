@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fajar Setiawan - About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 1. GENERAL STYLING */
+        :root {
+            --primary-navy: #0b1419;
+            --accent-gold: #4fd1c5;
+            --white: #FFFFFF;
+            --light-grey: #f4f4f4;
+            --text-dark: #333;
+            --font-main: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      height: 240px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-title {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: var(--primary-navy);
+      padding: 12px 20px;
+    }
+
+    .hero-title h1 {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .hero-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent-gol);
+      margin-top: 6px;
+    }
+
+@media (min-width: 768px) {
+  .journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .journal-card img {
+    height: 180px;
+  }
+}
+
+        .hero {            
+         position: relative;
+            height: 60vh;
+            background: url('21202003B.png') center/cover no-repeat;
+        }
+
+
+        .hero-box {
+            position: absolute;
+            bottom: 40px;
+            left: 5%;
+            right: 0;
+            background: var(--primary-navy);
+            color: white;
+            padding: 12px 20px;
+            max-width: 600px;
+            box-shadow: 10px 10px 0px var(--accent-gold);
+        }
+
+        .hero-box h1 {font-size: 2.5rem; margin-bottom: 15px;
+        }
+        
+        @media (min-width: 1024px) {
+    .hero-box {
+        left: 5%;
+        right: auto;
+    }
+}
+        /* 3. RECTOR'S GREETING */
+        .rector-section {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 4rem 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rector-content {
+            flex: 1;
+        }
+
+        .rector-label {
+            color: var(--accent-gold);
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .rector-name {
+            font-size: 1.8rem;
+            margin: 1rem 0;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+        }
+
+        .rector-quote {
+            font-style: italic;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .read-more-gold {
+            color: var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 3px;
+        }
+
+        .rector-image-wrap {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        /* 4. HISTORY & NAVIGATION */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 2rem;
+            gap: 2rem;
+            background-color: var(--light-grey);
+        }
+
+        .sidebar {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 1.5rem;
+        }
+
+        .sidebar h3 {
+            border-bottom: 1px solid rgba(11, 20, 25, 0.2);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(11, 20, 25, 0.1);
+        }
+
+        .sidebar ul li a::before {
+            content: "› ";
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .content-body {
+            background: var(--white);
+            padding: 1.5rem;
+        }
+
+        .breadcrumbs {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            color: #0b1419;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin-top: 5px;
+        }
+
+        .history-text {
+            margin-top: 1.5rem;
+            text-align: justify;
+            color: #0b1419;
+        }
+
+        .read-more-blue {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-navy);
+            font-weight: bold;
+            border-bottom: 2px solid var(--primary-navy);
+        }
+
+        /* 5. RESPONSIVENESS (Media Queries) */
+        @media (min-width: 768px) {
+            .hero {
+                height: flex;
+                justify-content: flex-start;
+            }
+
+            .hero-box {
+                width: 450px;
+                margin-left: 5%;
+                margin-bottom: 5%;
+            }
+
+            .rector-section {
+                flex-direction: row;
+                padding: 5rem 5% 0;
+                align-items: center;
+            }
+
+            .main-container {
+                grid-template-columns: 280px 1fr;
+                padding: 4rem 5%;
+            }
+
+            .history-text {
+                column-count: 2;
+                column-gap: 2rem;
+            }
+        }
+        
+/* Sembunyikan checkbox asli */
+.menu-checkbox {
+    display: none;
+}
+
+/* Style Label (Tombol Dropdown di Mobile) */
+.menu-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* Sembunyikan menu di mobile secara default */
+.sidebar-menu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #0b1419; /* Navy lebih gelap sedikit */
+}
+
+.sidebar-menu li {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(11, 20, 25, 0.1);
+}
+
+/* Ketika checkbox dicentang, buka menu */
+.menu-checkbox:checked ~ .sidebar-menu {
+    max-height: 500px; /* Angka yang cukup besar agar semua menu muncul */
+}
+
+/* Putar panah saat diklik */
+.menu-checkbox:checked ~ .menu-label .arrow {
+    transform: rotate(180deg);
+}
+
+/* --- RESPONSIVE (DESKTOP) --- */
+@media (min-width: 768px) {
+    /* Sembunyikan tombol label dropdown */
+    .menu-label {
+        display: none;
+    }
+
+    /* Tampilkan menu secara permanen */
+    .sidebar-menu {
+        max-height: none;
+        display: block;
+        background-color: var(--primary-navy);
+        padding: 1.5rem;
+    }
+
+    .sidebar-menu li {
+        padding: 10px 0;
+    }
+
+    /* Tambahkan judul manual kembali di atas menu (Opsional) */
+    .sidebar::before {
+        content: "Conpetencies";
+        display: block;
+        font-weight: bold;
+        font-size: 2rem;
+        color: white;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    }
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variasi animasi */
+.from-left {
+    transform: translateX(-50px);
+}
+
+.from-right {
+    transform: translateX(50px);
+}
+
+.from-left.show,
+.from-right.show {
+    transform: translateX(0);
+}
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b1419;
+            color: #a0aec0;
+            line-height: 1.4;
+        }
+
+        .container2 {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .campus-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            gap: 20px;
+        }
+
+        /* Ikon kotak di sebelah kiri */
+        .icon-box {
+            flex-shrink: 0;
+            width: 70px;
+            height: 70px;
+            border: 2px solid #4fd1c5;
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: grayscale(100%); /* Efek hitam putih sesuai gambar */
+        }
+
+        /* Bagian konten teks */
+        .content {
+            flex-grow: 1;
+        }
+
+        .title-bar {
+            background-color: #4fd1c5;
+            color: #0b1419;
+            padding: 8px 15px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .address {
+            padding-left: 15px;
+            font-size: 15px;
+            color: #a0aec0;
+        }
+
+        .email-link {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            text-decoration: none;
+            color: #a0aec0;
+            font-size: 15px;
+        }
+
+        .email-link i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Responsif untuk layar kecil (HP) */
+        @media (max-width: 480px) {
+            .campus-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .title-bar {
+                font-size: 18px;
+            }
+            .address {
+                padding-left: 0;
+            }
+            .email-link {
+                justify-content: center;
+            }
+        }
+        
+        .title-bar1 {
+            color: #ffffff;
+            padding: 8px 15px;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+        }
+
+.history-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ukuran gambar */
+.history-wrapper img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* teks */
+.history-text {
+    flex: 1;
+}
+
+/* Responsive: mobile */
+@media (max-width: 768px) {
+    .history-wrapper {
+        flex-direction: column;
+    }
+
+    .history-wrapper img {
+        width: 100%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            FAJAR SETIAWAN
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="com.html">Competencies</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="j.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="header-btn">
+         <a href="cv-fajar-setiawan.pdf">
+            <button class="btn btn-filled">Download CV</button>
+            </a>
+            <a href="https://wa.me/6285602283775" 
+              target="_blank" 
+              class="btn btn-outline">Contact Me</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-box">
+            <h1>Who I Am?</h1>
+            <p>I am a fresh graduate in Accounting who is detail-oriented, accustomed to working with financial data, and has a strong interest in managing and analyzing financial statements.</p>
+        </div>
+    </section>
+
+    <section class="rector-section">
+        <div class="rector-content">
+        <div class="rector-content animate from-left">
+            <p class="rector-label">VISION OF LIFE</p>
+            <h2 class="rector-name">Fajar Setiawan, S.Ak.</h2>
+            <p class="rector-quote">“Building a life that is financially independent, emotionally stable, and beneficial to the environment and future generations.”</p>
+        </div>
+        <div class="rector-image-wrap">
+        <div class="rector-image-wrap animate from-buttem">
+            <img src="1769401375073.png" alt="Rector UGM">
+        </div>
+    </section>
+
+    <main class="main-container">
+<aside class="sidebar">
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    
+    <label for="menu-toggle" class="menu-label">
+        Conpetencies
+        <span class="arrow">▼</span>
+    </label>
+
+    <ul class="sidebar-menu">
+        <li><a href="fin.html">Financial Reporting</a></li>
+        <li><a href="tax.html">Tax Administration (PPh & VAT)</a></li>
+        <li><a href="au.html">Audit Documentation</a></li>
+        <li><a href="ex.html">Microsoft Excel (Pivot, Lookup, If)</a></li>
+        <li><a href="sos.html">Social Media Management</a></li>
+    </ul>
+</aside>
+
+
+        <article class="content-body">
+            <h2 class="section-title">Personal Introduction</h2>
+            <div class="history-wrapper">
+            <img src="21202003.png" alt="Sejarah UGM">
+            
+            <div class="history-text">
+                <p>I am an individual with a strong interest in personal development, professionalism, and continuous achievement. I believe that the combination of discipline, creativity, and consistency is the key to producing high-quality work. In every role I take on, I always strive to deliver my best contribution. I am accustomed to working with high standards and taking full responsibility for my results. For me, the learning process never stops and is an essential part of my career journey.</p>
+                <br>
+                <p>My educational background and professional experiences have shaped an analytical and structured way of thinking. I am comfortable facing challenges with a logical yet flexible approach. Adaptability has become one of my core strengths in dynamic work environments. I am able to work independently as well as collaboratively within a team through effective communication. Every experience I gain is treated as an opportunity for further growth.</p>
+                <br>
+                <p>Through my experiences, I have developed a strong sense of responsibility and attention to detail in everything I do. I understand the importance of accuracy, reliability, and integrity in achieving sustainable results. I consistently aim to manage tasks efficiently, prioritize effectively, and meet deadlines without compromising quality. This mindset allows me to contribute positively in both individual assignments and team-based projects.</p>
+                <br>
+                <p>I am also highly motivated to continuously improve my skills and expand my knowledge, particularly in areas that support professional growth and organizational objectives. I actively seek feedback as a tool for self-improvement and view challenges as valuable learning opportunities. By maintaining an open mindset, I am able to adapt to new systems, processes, and expectations with confidence.</p>
+                <br>
+                <p>Ultimately, I aspire to be a professional who adds value through meaningful contributions, strong work ethics, and a commitment to excellence. I am eager to grow alongside an organization that values development, collaboration, and long-term impact. With a balanced combination of analytical thinking, adaptability, and dedication, I am ready to take on responsibilities and grow into greater roles in the future.</p>
+            </div>
+        </article>
+    </main>
+    
+    <section>
+                <br>
+                <br>
+     <div class="container2">
+            <div class="title-bar1">Education Journey</div>
+
+    <div class="campus-card">
+        <div class="icon-box">
+            <img src="ucy.png" alt="Ganesha">
+        </div>
+        <div class="content">
+            <div class="title-bar">Universitas Cokroaminoto Yogyakarta</div>
+            <div class="address">
+                Jl. Perintis Kemerdekaan Jl. Gambiran, <br>
+                Pandeyan, Kec. Umbulharjo, <br>
+                Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161
+                <a href="mailto:humas@itb.ac.id" class="email-link">
+                    <i class="fa-regular fa-envelope"></i> https://ucy.ac.id/
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="campus-card">
+        <div class="icon-box">
+            <img src="sma.png" alt="Jatinangor">
+        </div>
+        <div class="content">
+            <div class="title-bar">SMA Negeri 1 Jalaksana</div>
+            <div class="address">
+                JL. Raya Padamenak, Jalaksana,<br>
+                Padamenak, Kec. Jalaksana, <br>
+                Kabupaten Kuningan, Jawa Barat 45554
+                <a href="mailto:humas_jatinangor@itb.ac.id" class="email-link">
+                    <i class="fa-regular fa-envelope"></i> https://sman1-jalaksana.sch.id/
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="campus-card">
+        <div class="icon-box">
+            <img src="smp.png" alt="Cirebon">
+        </div>
+        <div class="content">
+            <div class="title-bar">SMP Negeri 1 Jalaksana</div>
+            <div class="address">
+                Jl. SMP Jalaksana,<br>
+                Padamenak, Kec. Jalaksana, <br>
+                Kabupaten Kuningan, Jawa Barat 45554
+                <a href="mailto:kampuscirebon@itb.ac.id" class="email-link">
+                    <i class="fa-regular fa-envelope"></i> https://www.smpn1jalaksana.sch.id/?m=1
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="campus-card">
+        <div class="icon-box">
+            <img src="mi.png" alt="Jakarta">
+        </div>
+        <div class="content">
+            <div class="title-bar">MIS LKMD Kalapagunung</div>
+            <div class="address">
+                Jl. Buyut Punduh No. 626<br>
+                Kalapagunung, Kec. Kramatmulya, <br>
+                Kabupaten Kuningan, Jawa Barat 45553
+                <a href="mailto:kampusjakarta@itb.ac.id" class="email-link">
+                    <i class="fa-regular fa-envelope"></i> https://eventkampus.com/sekolah/mis-lkmd-kalapagunung__30226
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Actively Seeking Junior Accounting or Finance Roles</h2>
+            <a href="https://wa.me/6285602283775" 
+              target="_blank" 
+              class="btn btn-filled">Contact Me</a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col info">
+                 <p1>Regard,</p1>
+                    <div class="footer-logo">Fajar Setiawan</div>
+                    <p>Accounting graduate with interest in financial reporting, bookkeeping, taxation, and administrative finance support roles.</p>
+                    <p>I am ready to contribute, learn, and grow in a professional finance environment.</p>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Link</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="com.html">Competencies</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/phazarrs?igsh=OXdnYjh0NHR2dzN2">Instagram</a></li>
+                        <li><a href="https://x.com/_xetya1">X</a></li>
+                        <li><a href="https://www.linkedin.com/in/fajar-setiawan-97074b29a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Based</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ds. Kalapagunung Kec. Kramatmulya Kab. Kuningan Jawa Barat 45553</p>
+                    <p><i class="fas fa-envelope"></i> fajarsetiawan.s.ak@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll('.animate').forEach(el => {
+    observer.observe(el);
+});
+</script>
+</body>
+</html>
